@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>マイホームページ</title>
+    <style>
+        /* ここにデザインの命令を書きます */
+       h1 {
+    color: blue;
+    background-color: pink;
+    text-align: center;
+    padding: 20px;
+}
+
+p {
+    color: #ff4500; /* オレンジっぽい赤になります */
+    font-size: 20px; /* 文字を少し大きくします */
+    text-align: center;
+}
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    line-height: 1.6; /* 行間を少し広げると読みやすくなります */
+    color: #333;      /* 真っ黒(#000)より少しグレーにすると目に優しいです */
+    background-color: #f0f8ff; /* 薄い青色（アリスブルー） */
+}
+img {
+    width: 50%;  /* 横幅を300ピクセルに固定する */
+    height: auto;   /* 高さは横幅に合わせて自動調整する（重要！） */
+    display: block; /* 中央寄せなどをするための準備 */
+    margin: 0 auto; /* 左右の余白を自動にして真ん中に寄せる */
+}
+li {
+    list-style-type: square;
+}
+.my-button {
+    display: inline-block;    /* 幅や余白を正しく設定するための準備 */
+    background-color: #007bff; /* ボタンの色（青） */
+    color: white;              /* 文字の色 */
+    padding: 10px 20px;       /* 内側の余白（上下 左右） */
+    text-decoration: none;     /* リンクの下線を消す */
+    border-radius: 50px;        /* 角を少し丸くする */
+    transition: transform 0.3s;
+}
+.my-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0,2);
+    background-color: #0056b3;
+}
+.button-container {
+    display: flex;          /* 中身を横並びにする */
+    justify-content: center; /* 横方向の真ん中に寄せる */
+    gap: 20px;              /* ボタンとボタンの間のすき間 */
+    margin-top: 20px;       /* 上に少し余白を作る */
+}
+.intro-container {
+    display: flex;           /* 横並びにする */
+    align-items: center;     /* 上下の真ん中で揃える */
+    justify-content: space-between; /* 両端に広げて配置する */
+    padding: 40px;
+    margin-bottom: 50px;
+    background-color: #f9f9f9;
+    /* 上から下へ、薄いグレーから白へ変化 */
+    background: linear-gradient(to bottom, #f0f2f5, #ffffff);
+    padding: 60px 20px;
+}
+.hero-section {
+    background-image: url('background.jpg');
+    background-size: cover;      /* 画面いっぱいに広げる */
+    background-position: center; /* 中央に合わせる */
+    color: white;
+    padding: 100px 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 文字に影をつけて読みやすくする */
+}
+.intro-text {
+    flex: 1;                /* 文章の方を広げる */
+    padding-right: 20px;
+}
+
+.intro-image {
+    flex: 0 0 200px;        /* 画像の幅を200pxで固定する */
+}
+.navbar {
+    display: flex;
+    justify-content: space-between; /* ロゴとメニューを両端に分ける */
+    align-items: center;
+    background-color: #333;        /* ダークグレーの背景 */
+    padding: 10px 20px;
+    color: white;
+}
+
+.nav-links {
+    display: flex;                 /* リスト項目も横に並べる */
+    list-style: none;              /* 黒丸を消す */
+    gap: 20px;                     /* 項目間のすき間 */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;         /* 下線を消す */
+}
+.nav-links a:hover {
+    color: #ff9900; /* マウスを乗せたときにオレンジ色にする */
+    text-decoration: underline; /* 下線を表示させる */
+}
+/* 1. アニメーションの設計図（名前をふんわり＝fuwaにしました） */
+@keyframes fuwa {
+  0%   { transform: translateY(0); }     /* 開始地点 */
+  50%  { transform: translateY(-10px); } /* 中間地点（10px上に浮く） */
+  100% { transform: translateY(0); }     /* 終了地点 */
+}
+
+/* 2. 動かしたい要素に設計図を割り当てる */
+.intro-image img {
+  animation: fuwa 3s infinite; /* fuwaという動きを3秒かけて、無限(infinite)に繰り返す */
+}
+    </style>
+</head>
+<body>
+    <h1>FURATTO MOLKKY</h1>
+    <p>【ゆるっと活動】モルックサークル「[サークル名]」メンバー募集中！</p>
+    <h2>話題の北欧スポーツ「モルック」をみんなで楽しみませんか？
+「モルックって何？」という初心者の方、大歓迎です！木の棒を投げて倒すだけというシンプルなルールなので、運動神経に関係なく誰でもすぐに楽しめます。
+
+活動内容： 公園で練習、ミニゲーム、時々ピクニック
+
+雰囲気： 20代〜[XX]代まで、和気あいあいと活動中
+
+持ち物： 動きやすい服装のみ（道具は貸し出します！）
+
+仕事や学校以外の「第3の居場所」として、一緒に笑いながらリフレッシュしましょう！お気軽に見学・体験にお越しください。</h2>
+<img src="sports_molkky_morukku_man.png" alt="ランダムな画像">
+    <ul>
+    <li>もルックの練習、試合</li>
+    <li>様々な人同士の交流</li>
+    <li>マイナースポーツの普及</li>
+</ul>
+    <a href="#" class="my-button">詳しく見る</a>
+<div class="button-container">
+    <a href="#" class="my-button">ボタン1</a>
+    <a href="#" class="my-button">ボタン2</a>
+</div>
+<section class="intro-container">
+    <div class="intro-text">
+        <h2>私について</h2>
+        <p>現在大学一年生。趣味はアニメ、漫画鑑賞(何かおすすめのものがあれば話しましょう。)</p>
+    </div>
+    <div class="intro-image">
+        <img src="bo-ttoshiteru_man.png" alt="プロフィール写真" style="width:200px;">
+    </div>
+</section>
+</body>
+<header>
+    <nav class="navbar">
+        <div class="logo">マイサイト</div>
+        <ul class="nav-links">
+            <li><a href="#">ホーム</a></li>
+            <li><a href="#">自己紹介</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+        </ul>
+    </nav>
+</header>
+</html>
